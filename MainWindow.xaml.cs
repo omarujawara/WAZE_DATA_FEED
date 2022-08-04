@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WAZE_DATA_FEED.Services;
 
 namespace WAZE_DATA_FEED
 {
@@ -23,6 +24,13 @@ namespace WAZE_DATA_FEED
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void btn_Click(object sender, RoutedEventArgs e)
+        {
+            WazeDataFeed results = new WazeDataFeed();
+            await results.getWazeFeed();
+            results.getCities();
         }
     }
 }
