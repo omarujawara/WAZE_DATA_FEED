@@ -7,10 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <ListView Margin="10">
+        <!--<ListView Margin="10">
             <ListViewItem>A ListView</ListViewItem>
             <ListViewItem IsSelected="True">with several</ListViewItem>
             <ListViewItem>items</ListViewItem>
+        </ListView>-->
+
+        <ListView>
+
+            <ListView.View>
+
+                <GridView AllowsColumnReorder="true"
+              ColumnHeaderToolTip="Employee Information">
+
+                    <GridViewColumn  Header="Country" Width="100"/>
+
+                    <GridViewColumn Width="100">
+                        <GridViewColumnHeader>City
+                            <GridViewColumnHeader.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Ascending" />
+                                    <MenuItem Header="Descending" />
+                                </ContextMenu>
+                            </GridViewColumnHeader.ContextMenu>
+                        </GridViewColumnHeader>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Street" Width="100"/>
+                </GridView>
+
+            </ListView.View>
         </ListView>
     </Grid>
 </UserControl>

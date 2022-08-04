@@ -8,22 +8,57 @@
         xmlns:views="clr-namespace:WAZE_DATA_FEED.Views"
         mc:Ignorable="d"
         Title="MTA Bridges and Tunnels" Height="450" Width="800">
-    <Grid Margin="2,0,2,0">
+    <Grid Margin="-2,0,2,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="20"/>  <!-- column start -->
+            <ColumnDefinition Width="auto"/><!-- column 1 -->
+            <ColumnDefinition Width="auto"/><!-- column 2 -->
+            <ColumnDefinition Width="auto"/><!-- column 3 -->
+            <ColumnDefinition Width="auto"/><!-- column 4 -->
+            <ColumnDefinition Width="auto"/><!-- column 5 -->
+            <ColumnDefinition Width="auto"/><!-- column 6 -->
+            <ColumnDefinition Width="auto"/><!-- column 7 -->
+            <ColumnDefinition Width="auto"/> <!-- column 8 -->
+            <ColumnDefinition Width="*"/><!-- *  -->
+            <ColumnDefinition Width="20"/> <!-- row end -->
         </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="20"/> <!-- row start -->
+            <RowDefinition Height="auto"/><!-- row 1 -->
+            <RowDefinition Height="auto"/><!-- row 2 -->
+            <RowDefinition Height="auto"/><!-- row 3 -->
+            <RowDefinition Height="auto"/><!-- row 4 -->
+            <RowDefinition Height="auto"/><!-- row 5 -->
+            <RowDefinition Height="auto"/><!-- row 6 -->
+            <RowDefinition Height="auto"/><!-- row 7 -->
+            <RowDefinition Height="auto"/><!-- row 8 -->
+            <RowDefinition Height="auto"/><!-- row 9 -->
+            <RowDefinition Height="auto"/><!-- row 10 -->
+            <RowDefinition Height="auto"/><!-- row 11 -->
+            <RowDefinition Height="*"/><!-- * -->
+            <RowDefinition Height="20"/><!-- row end -->
         </Grid.RowDefinitions>
-        
-        <views:AlertsView Grid.Column="1" Grid.RowSpan="2" Grid.Row="1"/>
-        <!--<views:JamsView Grid.Column="2" Grid.RowSpan="2" Grid.Row="1"/>-->
-        <Button Grid.Column="2" x:Name="btn" Click="btn_Click" Content="click"/>
+
+        <!-- Header -->
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="LiveTraffic Feed"
+                   Grid.ColumnSpan="3" FontSize="28" Margin="20,0,20,20"
+                   HorizontalAlignment="Center"/>
+        <!-- checked boxes  -->
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5">
+            <CheckBox  Content="Brooklyn" Margin="10"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox  Content="Bronx" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox  Content="Manhattan" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox  Content="Queens" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox  Content="Staten Island" Margin="10"  HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
+
+        <views:AlertsView Grid.Column="2"  Grid.Row="3" Grid.RowSpan="2"/>
+        <views:JamsView Grid.Column="2" Grid.Row="5" Grid.RowSpan="2"/>
+        <views:FiltersView Grid.Column="1" Grid.RowSpan="3" Grid.Row="5"/>
+        <!--<Button Grid.Column="2" x:Name="btn" Click="btn_Click" Content="click"/>-->
     </Grid>
 
     

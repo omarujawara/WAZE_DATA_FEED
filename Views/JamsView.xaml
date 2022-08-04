@@ -7,6 +7,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            <TextBlock Text="Jams"/>
+        <ListView>
+
+            <ListView.View>
+
+                <GridView AllowsColumnReorder="true"
+              ColumnHeaderToolTip="Country">
+
+                    <GridViewColumn  Header="First Name" Width="100"/>
+
+                    <GridViewColumn Width="100">
+                        <GridViewColumnHeader>City
+                            <GridViewColumnHeader.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Ascending" />
+                                    <MenuItem Header="Descending" />
+                                </ContextMenu>
+                            </GridViewColumnHeader.ContextMenu>
+                        </GridViewColumnHeader>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Street" Width="100"/>
+                </GridView>
+
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>
