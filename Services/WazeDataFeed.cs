@@ -26,7 +26,7 @@ namespace WAZE_DATA_FEED.Services
 
         public void getCities()
         {
-            for(int i = 0; i < results.alerts.Count; ++i)
+            for(int i = 0; i < results?.alerts?.Count; ++i)
             {
                 Debug.WriteLine(results.alerts[i].city);
             }
